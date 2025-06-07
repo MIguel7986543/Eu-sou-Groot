@@ -1,21 +1,19 @@
 ﻿Console.Clear();
 
-string nomeDgitado = "eu sou Groot";
+string EuSouGroot = "?";
+string euSouGroot = " Tchau";
 
 Console.WriteLine("Conversa com seu amigo Groot");
-nomeDgitado = Console.ReadLine()!;
+EuSouGroot = Console.ReadLine()!;
 
-Console.ReadLine();
-Console.WriteLine("Eu sou Groot");
-Console.ReadLine();
-Console.WriteLine("Eu sou Groot");
-Console.ReadLine();
-Console.WriteLine("Eu sou Groot");
-Console.ReadLine();
-Console.WriteLine("Eu sou Groot");
-Console.ReadLine();
-Console.WriteLine("Eu sou Groot");
+if (EuSouGroot == euSouGroot)
+{
+    Console.WriteLine("\nEu sou Groot");
+}
 
-Console.WriteLine("Tchau Groot");
-Console.ReadKey();
-Console.WriteLine("Eu sou Groot");
+else
+
+    {
+        Console.WriteLine("\n Eu sou Groot!");
+    }
+     
