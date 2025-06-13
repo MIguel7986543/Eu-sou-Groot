@@ -1,19 +1,28 @@
-﻿Console.Clear();
+﻿const string Sair = "tchau";
 
-string EuSouGroot = "?";
-string euSouGroot = " Tchau";
+Console.WriteLine("Conversa com seu amigo Groot#");
 
-Console.WriteLine("Conversa com seu amigo Groot");
-EuSouGroot = Console.ReadLine()!;
-
-if (EuSouGroot == euSouGroot)
+string pergunta;
+do
 {
-    Console.WriteLine("\nEu sou Groot");
+ Console.Write("Pergunta: ");
+ pergunta = Console.ReadLine()!;
+
+ string resposta = ObtemRespostaGroot(pergunta);
+
+ ExibeResposta(ObtemRespostaGroot(pergunta));
+
+} while (pergunta.Trim().ToLower() != Sair);
+
+
+void ExibeResposta(string resposta)
+{
+ Console.WriteLine($" Resposta: {resposta}");
 }
 
-else
-
-    {
-        Console.WriteLine("\n Eu sou Groot!");
-    }
-     
+string ObtemRespostaGroot(string pergunta)
+{
+    return pergunta.Trim().ToLower() == Sair ?
+        "Eu sou Groot!" :
+        "Eu sou Groot.";
+}
